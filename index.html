@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Typing Text Animation In Html And Css</title>
+
+    <!-- Unicons Line Css Cdn Link -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Custom Css Cdn Link -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <span class="txt first-txt">I'm a</span>
+        <span class="txt second-txt">Freelancer</span>
+    </div>
+
+
+    <script>
+        const typing = document.querySelector('.second-txt');
+
+        const textLoad = () =>{
+            setTimeout(() =>{
+                typing.textContent = "Freelancer";
+            }, 0)
+            setTimeout(() =>{
+                typing.textContent = "Youtuber";
+            }, 3000)
+            setTimeout(() =>{
+                typing.textContent = "Blogger";
+            }, 6000)
+        }
+
+        textLoad();
+        setInterval(textLoad, 9000);
+    </script>
+</body>
+</html>
